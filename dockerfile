@@ -2,7 +2,6 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install dependencies for cloudflared, Chrome, and Selenium
 RUN apt-get update && apt-get install -y \
     curl \
     gnupg \
@@ -23,7 +22,6 @@ RUN apt-get update && apt-get install -y \
     libgraphene-1.0-0 \
     libatomic1 \
     libxslt1.1 \
-    libwoff2-1 \
     libvpx7 \
     libevent-2.1-7 \
     libopus0 \
@@ -44,6 +42,7 @@ RUN apt-get update && apt-get install -y \
     libhyphen0 \
     libmanette-0.2-0 \
     libx264-164 \
+    --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Add Cloudflare GPG key
