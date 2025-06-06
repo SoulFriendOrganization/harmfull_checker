@@ -42,7 +42,6 @@ RUN apt-get update && apt-get install -y \
     libhyphen0 \
     libmanette-0.2-0 \
     libx264-164 \
-    --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Add Cloudflare GPG key
