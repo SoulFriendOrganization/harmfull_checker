@@ -52,7 +52,7 @@ def login_endpoint(
         response.set_cookie(
             key="token",
             value=access_token,
-            httponly=True,
+            httponly=False,
             secure=True,  
             samesite="Lax"  
         )

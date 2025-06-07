@@ -119,4 +119,4 @@ cython_debug/
 downloaded_files/
 
 # Do not ignore .env files
-!*.env
+.env
